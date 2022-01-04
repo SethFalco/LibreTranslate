@@ -37,25 +37,29 @@
 	<header>
 		<nav class="blue lighten-1" role="navigation">
 			<div class="nav-wrapper container">
-				<a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-				<a id="logo-container" href="/" class="brand-logo">
-					<img src="{{ url_for('static', filename='icon.svg') }}" alt="Logo for LibreTranslate" class="logo">
-          <span>LibreTranslate</span>
-				</a>
-				<ul class="right hide-on-med-and-down">
-				<li><a href="/docs">API Docs</a></li>
-				<li><a href="https://github.com/LibreTranslate/LibreTranslate" rel="noopener noreferrer">GitHub</a></li>
-				{% if api_keys %}
-				<li><a href="javascript:setApiKey()" title="Set API Key"><i class="material-icons">vpn_key</i></a></li>
-				{% endif %}
-				</ul>
+        <div id="nav-menu-items">
+          <a href="#" data-target="nav-mobile" class="sidenav-trigger">
+            <i class="material-icons">menu</i>
+          </a>
+          <a id="logo-container" href="/">
+            <img src="{{ url_for('static', filename='icon.svg') }}" alt="Logo for LibreTranslate" class="logo">
+            <h1 id="title-text">LibreTranslate</h1>
+          </a>
+          <ul id="nav-menu-items-list" class="hide-on-med-and-down">
+            <li><a href="/docs">API Docs</a></li>
+            <li><a href="https://github.com/LibreTranslate/LibreTranslate" rel="noopener noreferrer">GitHub</a></li>
+            {% if api_keys %}
+            <li><a href="javascript:setApiKey()" title="Set API Key"><i class="material-icons">vpn_key</i></a></li>
+            {% endif %}
+          </ul>
+        </div>
 
-				<ul id="nav-mobile" class="sidenav">
-				<li><a href="/docs">API Docs</a></li>
-				<li><a href="https://github.com/LibreTranslate/LibreTranslate" rel="noopener noreferrer">GitHub</a></li>
-				{% if api_keys %}
-				<li><a href="javascript:setApiKey()" title="Set API Key"><i class="material-icons">vpn_key</i></a></li>
-				{% endif %}
+        <ul id="nav-mobile" class="sidenav">
+          <li><a href="/docs">API Docs</a></li>
+          <li><a href="https://github.com/LibreTranslate/LibreTranslate" rel="noopener noreferrer">GitHub</a></li>
+          {% if api_keys %}
+          <li><a href="javascript:setApiKey()" title="Set API Key"><i class="material-icons">vpn_key</i></a></li>
+          {% endif %}
 				</ul>
 			</div>
 		</nav>

@@ -1,5 +1,11 @@
 /* Custom styles for LibreTranslate page */
 
+html, body,
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
 html,
 body,
 select {
@@ -12,7 +18,7 @@ select {
 }
 
 h3.header {
-  margin-bottom: 2.5rem;
+  margin: 2.5rem 0;
 }
 
 .mb-0 {
@@ -132,13 +138,13 @@ h3.header {
 }
 
 .btn-switch-type:hover {
-    background-color: #eee !important;
-    color: #42A5F5;
+  background-color: #eee !important;
+  color: #42A5F5;
 }
 
 .btn-switch-type.active {
-    background-color: #42A5F5 !important;
-    color: #fff;
+  background-color: #42A5F5 !important;
+  color: #fff;
 }
 
 .file-dropzone {
@@ -249,15 +255,44 @@ h3.header {
 }
 
 #logo-container {
-  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .logo {
   height: 32px;
 }
 
+#nav-menu-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#title-text {
+  display: none;
+  justify-content: end;
+  font-size: 2em;
+  margin-left: .5em;
+}
+
+#nav-menu-items-list {
+  grid-column-start: 3;
+}
+
 @media (min-width: 280px) {
   .btn-text {
+    display: inline;
+  }
+}
+
+@media (min-width: 720px) {
+  #nav-menu-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  #title-text {
     display: inline;
   }
 }
@@ -268,9 +303,11 @@ h3.header {
     margin: auto;
     padding: 0;
   }
+
   .language-select:after {
     content: none;
   }
+
   .language-select span {
     display: none;
   }
